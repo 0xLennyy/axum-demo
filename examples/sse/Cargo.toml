@@ -1,0 +1,22 @@
+[package]
+name = "sse"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.5"
+axum-extra = { version = "0.9.3", features = ["typed-header"] }
+futures = "0.3.30"
+headers = "0.4.0"
+tokio = { version = "1.38.0", features = ["full"] }
+tokio-stream = "0.1.15"
+tower-http = { version = "0.5.2", features = ["fs", "trace"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+
+[dev-dependencies]
+eventsource-stream = "0.2.3"
+reqwest = { version = "0.12.4", features = ["stream"] }
+reqwest-eventsource = "0.6.0"

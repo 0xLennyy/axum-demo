@@ -1,0 +1,16 @@
+workspace = { members = ["examples/anyhow-error-response", "examples/async-graphql/starwars", "examples/auto-reload", "examples/chat", "examples/consume-body-in-extractor-or-middleware", "examples/cors", "examples/customize-extractor-error", "examples/customize-path-rejection", "examples/dependency-injection", "examples/diesel-async-postgres", "examples/diesel-postgres", "examples/error-handling", "examples/form", "examples/global-404-handler", "examples/graceful-shutdown", "examples/handle-head-request", "examples/hello-world", "examples/http-proxy", "examples/jwt", "examples/key-value-store", "examples/listen-multiple-addrs", "examples/low-level-openssl", "examples/low-level-rustls", "examples/multipart-form", "examples/oauth", "examples/parse-body-based-on-content-type", "examples/print-request-response", "examples/prometheus-metrics", "examples/query-params-with-empty-strings", "examples/readme", "examples/reqwest-response", "examples/reverse-proxy", "examples/routes-and-handlers-close-together", "examples/serve-with-hyper", "examples/simple-router-wasm", "examples/sqlx-postgres", "examples/sse", "examples/static-file-server", "examples/stream-to-file", "examples/templates", "examples/templates-minjinja", "examples/testing", "examples/testing-websockets", "examples/tls-graceful-shutdown", "examples/tls-rustls", "examples/todos", "examples/tokio-postgres", "examples/tokio-redis", "examples/tracing-aka-logging", "examples/unix-domain-socket", "examples/validator", "examples/versioning", "examples/websockets"] }
+[package]
+name = "axum-demo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.5"
+tracing-subscriber = "0.3.18"
+serde = { version = "1.0.203", features = ["derive"] }
+
+[dependencies.tokio]
+version = "1.38.0"
+features = ["rt-multi-thread"]
